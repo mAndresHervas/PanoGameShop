@@ -38,11 +38,7 @@ public class LoginModel
      * @throws SQLException - Para controlar las excepciones lanzadas en la base de datos.
      */
     public boolean registrarUsuario(Usuario usuario) throws SQLException {
-        if (db.anyadirUsuarioBD(usuario))
-        {
-            return true;
-        }
-        return false;
+        return db.anyadirUsuarioBD(usuario);
     }
     public int obtenerId()
     {
